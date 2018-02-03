@@ -62,7 +62,7 @@ router.post('/introPage', (req, res) => {
 	res.locals.address = req.body.address;
 
 	const data = new Data({
-		movie: req.body.movie.toLowercase(),
+		movie: req.body.movie,
 		year: req.body.year
 	});
 

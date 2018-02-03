@@ -6,11 +6,7 @@ const Data = mongoose.model('Data',{
 		type: String,
 		required: true,
 		minlength: 1,
-		trim: true,
-		validate: {
-			isAsync: false,
-			message: "Make sure movie has been entered!"
-		}
+		trim: true
 	},
 	year: {
 		type: String,

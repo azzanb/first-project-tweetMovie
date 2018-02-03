@@ -7,8 +7,8 @@ const bodyParser = require('body-parser'),
   pug = require('pug'),
   path = require('path'),
   
-  {mongoose} = require('./../../db/mongoose'),
-  routes = require('./../routes/routes')
+  {mongoose} = require('./../db/mongoose'),
+  routes = require('./routes/routes')
 ;
 
 
