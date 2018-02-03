@@ -1,0 +1,27 @@
+extends introPageLayout
+
+block content
+	.container
+		h1.display-1.text-center Introduction
+	|
+	.container.text-center 
+		form(method="post", action="/introPage")
+			|
+			.form-group
+				h2 What's your favorite movie?
+					if errMovieMessage
+						h5.error= errMovieMessage
+				|
+				label(for="movie")
+				input(type="text", name="movie", id="movie" placeholder="Movie")
+			|
+			.form-group
+				h2 What year was the film released?
+					if errYearMessage
+						h5.error= errYearMessage
+				|
+				label(for="year")
+				input(type="text", name="year", id="year" placeholder="Year of Release")
+			|
+			.button
+				button(type="submit") GO!

@@ -1,0 +1,93 @@
+extends homeLayout
+
+block content
+
+	.jumbotron
+		.container
+			.display-3 Welcome, #{credentials.name}!
+			|
+			.jumbotron-details
+				img.profile-details.profile-image(src= credentials.profile_image_url alt='Profile Picture')
+				|
+				p.profile-details Your Profile Description: #{credentials.description} 
+				|
+				p.profile-details You created your profile #{time_ago} ago. Below, you'll see your six most recent tweets. 
+
+	.container.movie-container
+		.row
+			if movie.Response !== 'False'
+				.col-sm-6
+					img.card-img(src=movie.Poster alt='Card image')
+				.col-sm-6 
+					.card-body.movie-details
+						h1.movie= movie.Title 
+						|
+						p.plot= movie.Plot
+						|
+						p.actors= movie.Actors
+						|
+						p.rating Rated #{movie.Rated}
+						|
+						p.genre= movie.Genre
+						|
+						p.director Don't forget the director, #{movie.Director}
+						|
+						p.info Not sure if you care much, but #{movie.Title}'s awards: #{movie.Awards} #{movie.Ratings[1].Source} gave it a score of #{movie.Ratings[1].Value}. Filmed in #{movie.Country}
+						|
+						a.website(href= movie.Website target='_blank') Visit the website
+			else
+				.card-body.movie-details
+					h1.movie Make sure the Title and Year is correct!
+					|
+					p.plot Plot unavailable
+					|
+					p.actors Actors unavailable
+					|
+					p.rating Rated U for unavailable
+					|
+					p.genre movie.Genre
+					|
+					p.director Don't forget the director, #{movie.Director}
+					|
+					p.
+					|
+					a.website(href='/introPage') Enter the Correct Movie Info
+
+
+	.container.card-container
+		- for(let i = 0; i <= 5; i++)
+			.card.card-twitter
+				img.card-img-top(src= friend.users[i].profile_image_url  alt='Card image cap')
+					|   
+				.card-body
+					h5.card-title About One of your Friends
+					|     
+					p.card-text.lead #{friend.users[i].name}'s screen name is #{friend.users[i].screen_name}. #{friend.users[i].name} has #{followerNums[i]} followers and following #{friendNums[i]} users.
+				.card-body
+					h5.card-title One of Your Tweets
+					|     
+					p.card-text= status[i].text
+				.card-body
+					h5.card-title Above Tweet Likes
+					|     
+					p.card-text= status[i].favorite_count
+				.card-body
+					h5.card-title Above Tweet Retweets?
+					|     
+					p.card-text #{status[i].retweet_count} retweets
+
+						
+
+
+
+
+
+
+
+
+
+
+
+
+
+

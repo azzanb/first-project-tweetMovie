@@ -1,0 +1,73 @@
+body {
+	background-color: #FAF7EA;
+	font-family: 'Kreon', serif;
+	font-variant: small-caps;
+	color: #5C9CAF;
+	/*color: #76D96D;*/
+}
+
+.jumbotron .container {
+	background-color: blue;
+}
+
+.container {
+	margin: 3rem auto;
+}
+h1 {
+	transition: color 1s ease;
+	letter-spacing: 6px;
+}
+
+hr {
+	height: 10px;
+	border-radius: 5px;
+	box-shadow: 0 10px 10px -10px inset;
+	background-color: rgba(	118, 217, 109, .3 );
+	position: relative;
+	text-align: center;
+}
+
+hr:after {
+	content: "Instagram";
+	display: inline-block;
+	line-height: 10px;
+	width: 100%;
+}
+
+.error {
+	color: #F52613;
+}
+
+.form-group {
+	margin-bottom: 3rem;
+	transition: color 1s ease;
+}
+
+.form-group:hover, .display-1:hover{
+	color: #76D96D;
+}
+
+input {
+	border: solid 2px rgba(	118, 217, 109, .3 );
+	box-shadow: inset 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+	text-align: center;
+}
+
+button {
+	background-color: rgba(92,156,175, .4);
+	border-radius: 20px;
+	font-size: 15px;
+	height: 4rem;
+	transition: .3s ease;
+	width: 4rem;
+}
+
+button:hover {
+	background-color: #76D96D;
+}
+
+button:active {
+  background-color: #5C9CAF;
+  box-shadow: 0 2px #5C9CAF;
+  transform: translateY(5px);
+}
