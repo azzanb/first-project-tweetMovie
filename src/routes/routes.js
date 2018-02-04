@@ -4,7 +4,7 @@ const express = require('express'),
 	commaNumber = require('comma-number'),
 
 	Twit = require('twit'),
-	configKey = require('./config'),
+	configKey = require('./config.js'),
 	tweet = new Twit(configKey),
 	ta = require('time-ago'),
 
