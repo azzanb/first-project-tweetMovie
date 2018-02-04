@@ -22,7 +22,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
-const port process.env.PORT || 3000);
+const port = process.env.PORT || 3000;
 
 
 //------------MongoDB DATABASE------------//
@@ -66,6 +66,6 @@ app.use(function(err, req, res, next) {
 
 
 //------------START SERVER------------//
-app.listen(process.env.PORT || 3000, function(){
-  console.log("Final Project is listening on port " + app.get('port'));
+app.listen(port, function(){
+  console.log(`Final Project is Running on ${port}`);
 });
