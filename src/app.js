@@ -66,6 +66,6 @@ app.use(function(err, req, res, next) {
 
 
 //------------START SERVER------------//
-http.createServer(app).listen(app.get('port'), function(){
+http.createServer(app).listen(process.env.PORT || 3000, function(){
   console.log("Final Project is listening on port " + app.get('port'));
 });
