@@ -12,17 +12,17 @@ const bodyParser = require('body-parser'),
 ;
 
 
+
 //------------SETUP APP------------//
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
 
-app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
-
+const port process.env.PORT || 3000);
 
 
 //------------MongoDB DATABASE------------//
@@ -66,6 +66,6 @@ app.use(function(err, req, res, next) {
 
 
 //------------START SERVER------------//
-http.createServer(app).listen(process.env.PORT || 3000, function(){
+app.listen(process.env.PORT || 3000, function(){
   console.log("Final Project is listening on port " + app.get('port'));
 });
