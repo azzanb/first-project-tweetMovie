@@ -4,14 +4,14 @@ block content
 
 	.jumbotron
 		.container
-			.display-3 Welcome, #{credentials.name}!
+			.display-4 Welcome!
 			|
 			.jumbotron-details
 				img.profile-details.profile-image(src= credentials.profile_image_url alt='Profile Picture')
 				|
-				p.profile-details Your Profile Description: #{credentials.description} 
+				p.profile-details You are looking at some of #{credentials.name}'s Twitter information.  
 				|
-				p.profile-details You created your profile #{time_ago} ago. Below, you'll see your six most recent tweets. 
+				p.profile-details He created his profile #{time_ago} ago. Below, you'll see his six most recent tweets, as well as your favorite movie, #{movie.Title}.
 
 	.container.movie-container
 		.row
@@ -32,12 +32,16 @@ block content
 						|
 						p.director Don't forget the director, #{movie.Director}
 						|
-						p.info Not sure if you care much, but #{movie.Title}'s awards: #{movie.Awards} #{movie.Ratings[1].Source} gave it a score of #{movie.Ratings[1].Value}. Filmed in #{movie.Country}
+						p.info Not sure if you care much, but #{movie.Title}'s awards: #{movie.Awards} #{movie.Ratings[1].Source} gave it a score of #{movie.Ratings[1].Value}. Filmed in #{movie.Country}.
 						|
-						a.website(href= movie.Website target='_blank') Visit the website
+						p
+							a.website(href= movie.Website target='_blank') Visit the website
+						|
+						p
+							a.website(href='/introPage') Enter another movie!
 			else
 				.card-body.movie-details
-					h1.movie Make sure the Title and Year is correct!
+					h1.movie Make sure the Title and Year is correct! Or, IMDB may not have all data of requested movie. 
 					|
 					p.plot Plot unavailable
 					|
@@ -49,9 +53,8 @@ block content
 					|
 					p.director Don't forget the director, #{movie.Director}
 					|
-					p.
-					|
-					a.website(href='/introPage') Enter the Correct Movie Info
+					p
+						a.website(href='/introPage') Try entering movie info again!
 
 
 	.container.card-container

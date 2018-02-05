@@ -47,6 +47,10 @@ hr:after {
 	color: #76D96D;
 }
 
+h2 {
+	font-size: 25px;
+}
+
 input {
 	border: solid 2px rgba(	118, 217, 109, .3 );
 	box-shadow: inset 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
