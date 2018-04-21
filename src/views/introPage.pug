@@ -1,10 +1,10 @@
 extends introPageLayout
 
 block content
-	.container
-		h1.display-1.text-center Introduction
+	.container(data-aos="fade-down" data-aos-easing="ease-in-sine" data-aos-duration="1000")
+		h1.display-1.text-center Before You Enter...
 	|
-	.container.text-center 
+	.container.text-center(data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-duration="1000")
 		form(method="post", action="/introPage")
 			|
 			.form-group

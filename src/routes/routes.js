@@ -13,6 +13,7 @@ const express = require('express'),
 	movieApiKey = '9af06f22';
 
 
+
 //------------Twitter API Calls------------//
 
 //GET user profile data 
@@ -49,9 +50,6 @@ function followers(req, res, next){
 }
 
 //------------END: Twitter API Calls------------//
-
-
-
 
 
 
@@ -104,7 +102,7 @@ router.get('/home', credentials, statuses, friends, followers, (req, res) => {
 		})
 
 		.then(movieDetails => {
-			res.render('home', {
+			res.render('homeLayout', {
 				movie: JSON.parse(movieDetails),
 				credentials: req.credentials,
 				status: req.statuses,
@@ -117,6 +115,10 @@ router.get('/home', credentials, statuses, friends, followers, (req, res) => {
 
 		});
 	});
+});
+
+router.get('/notYet', function(req,res){
+	res.send("Not Yet!")
 });
 
 

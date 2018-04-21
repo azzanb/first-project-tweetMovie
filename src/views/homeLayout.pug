@@ -5,9 +5,25 @@ html
 	link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css', integrity='sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb', crossorigin='anonymous') 
 	
 	link(rel='stylesheet', type='text/css', href='reset.css')
+	link(href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet")
 	link(rel='stylesheet', type='text/css', href='home.css')
 	link(href="https://fonts.googleapis.com/css?family=Fresca" rel="stylesheet")
 	link(href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet")
-	body
-		block content
+	link(href="https://fonts.googleapis.com/css?family=Allura" rel="stylesheet")
+	link(href="https://fonts.googleapis.com/css?family=Cormorant+Garamond" rel="stylesheet")
+	body#home(data-spy="scroll" data-target=".navbar")
+		include includes/navbar.pug
+		include includes/portfolio.pug
+		include includes/about.pug
+		include includes/employment.pug
+		include includes/certificates.pug
+		include includes/skills.pug
+		include includes/allProjects.pug
+		include includes/education.pug
+		include includes/finally.pug
+		include includes/movie.pug
+	|
+	script(src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js")
+	|
+	script(src='/scripts/home.js')
 		

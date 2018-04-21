@@ -1,0 +1,57 @@
+.container-fluid#movie(data-aos="fade-down" data-aos-easing="ease-in-sine" data-aos-duration="1000")
+	.container#movieText
+		if movie.Response !== 'False'
+			img#movieImage(src= movie.Poster alt='Movie Poster')
+			|
+			p.movieTitle= movie.Title 
+			|
+			hr.first
+			|
+			p.plot= movie.Plot
+			|
+			hr.first
+			|
+			p.actors= movie.Actors
+			|
+			hr.first
+			|
+			p.rating Rated #{movie.Rated}
+			|
+			hr.first
+			|
+			p.genre= movie.Genre
+			|
+			hr.first
+			|
+			p.director Don't forget the director, #{movie.Director}
+			|
+			hr.first
+			|
+			p #{movie.Awards} #{movie.Ratings[1].Source} gave it a score of #{movie.Ratings[1].Value}. 
+			|
+			p.filmedIn Filmed in #{movie.Country}.
+			|
+			hr.first
+			|
+			p.movieLinks#vistSite
+				a.website(href= movie.Website target='_blank') Visit the website
+			|
+			p.movieLinks#enterAgain
+				a.website(href='/introPage') Enter another movie!
+		else
+			.card-body.movie-details
+				h1.movie Make sure the Title and Year is correct! Or, IMDB may not have what has been requested. 
+				|
+				p.plot You decide the plot!
+				|
+				p.actors All are currently partying 
+				|
+				p.rating Rated U for Unavailable
+				|
+				p.genre Underrated & Unavailable
+				|
+				p.director And don't forget the director, Una Vailable!
+				|
+				p
+					a.website(href='/introPage') Try entering movie info again!
+
