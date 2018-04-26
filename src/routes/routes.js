@@ -68,7 +68,7 @@ router.get('/home', (req, res) => {
 
 		return request({ //GET movie details
 			method: 'GET',
-			uri: `http://www.omdbapi.com/?apikey=${movieApiKey}&t=${database[num].movie}&y=${database[num].year}`
+			uri: `http://www.omdbapi.com/?apikey=${movie}&t=${database[num].movie}&y=${database[num].year}`
 		})
 
 		.then(movieDetails => {
