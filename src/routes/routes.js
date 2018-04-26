@@ -10,7 +10,7 @@ const express = require('express'),
 
 	{Data} = require('./../../db/models/Data'),
 
-	movieApiKey = require('../movieAPI');
+	movie = require('../movie');
 
 
 
