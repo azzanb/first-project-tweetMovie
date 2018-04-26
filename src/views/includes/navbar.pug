@@ -1,52 +1,21 @@
-nav.navbar.navbar-expand-lg.sticky-top
-  a.navbar-brand(href='#') Azzan J. Braxton
-  |   
-  button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNav', aria-controls='navbarNav', aria-expanded='false', aria-label='Toggle navigation')
-    span.navbar-toggler-icon
-  |   
-  #navbarNav.collapse.navbar-collapse
-    ul.navbar-nav
-      li.nav-item.active
-        a.nav-link(href='#home')
-          | Home
-          span.sr-only (current)
+nav.navbar.navbar-toggleable-sm.navbar-expand-sm.fixed-top
+  a.navbar-brand(href='') Azzan J. Braxton
+    button.navbar-toggler(type='button' data-toggle='collapse' data-target='#mainNav' aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation")
+      span.navbar-toggler-icon
+    |
+    #mainNav.collapse.navbar-collapse
+      ul.navbar-nav
+        li.nav-item.dropdown
+          a#navbarDropdown.nav-link.dropdown-toggle(href='#' role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Explore
+          .dropdown-menu(aria-labelledby="navbarDropdown")
+            a.dropdown-item(href='#home') Home
+            a.dropdown-item(href='#about') About
+            a.dropdown-item(href='#employment') Employment
+            a.dropdown-item(href='#certificates') Certificates
+            a.dropdown-item(href='#skills') Skills
+            a.dropdown-item(href='#projects') Projects
+            a.dropdown-item(href='#education') Education
+            a.dropdown-item(href='#finally') Finally
+            a.dropdown-item(href='#movie') Your Movie
+            a.dropdown-item(href='/introPage') Back to Introduction
 
-      li.nav-item.active
-        a.nav-link(href='#about')
-          | About
-          span.sr-only (current)
-      |       
-      li.nav-item
-        a.nav-link.employment(href='#employment') 
-          | Employment
-          span.sr-only (current) 
-      |
-      li.nav-item
-        a.nav-link.skillsLink(href='#certificates') 
-          | Certifications
-          span.sr-only (current)
-      |
-      li.nav-item
-        a.nav-link.skillsLink(href='#skills') 
-          | Skills
-          span.sr-only (current)
-      |       
-      li.nav-item
-        a.nav-link(href='#projects') 
-          | Projects & Websites
-          span.sr-only (current)
-      |
-      li.nav-item
-        a.nav-link(href='#education') 
-          | Education
-          span.sr-only (current)
-      |
-      li.nav-item
-        a.nav-link.growth(href='#finally') 
-          | Finally
-          span.sr-only (current)
-      |       
-      li.nav-item
-        a.nav-link.contact(href='#movie') 
-          | Your Movie
-          span.sr-only (current)

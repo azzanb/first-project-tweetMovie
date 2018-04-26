@@ -2,7 +2,7 @@ body {
 	background-color: #FAF7EA;
 	font-family: 'Cormorant Garamond', serif;
 	font-variant: small-caps;
-	color: #565653;
+	color: #D0CDCD;
 }
 
 /*----------NAVBAR----------*/
@@ -12,7 +12,7 @@ body {
 
 .navbar-brand {
 	font-family: 'Allura', cursive;
-	color: #B19710;
+	color: #FBF6C2;
 	font-weight: bold;
 	font-size: 36px;
 }
@@ -62,6 +62,7 @@ body {
 /*----------ENTRANCE----------*/
 
 .container {
+	color: #565653;
 	margin: 3rem auto;
 }
 h1 {

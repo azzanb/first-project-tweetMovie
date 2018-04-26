@@ -2,9 +2,11 @@ body {
 	background-color: #EEECE7;
 	color: #565653;
 	font-family: 'Cormorant Garamond', serif;
+	padding: 0;
 }
 
 .header {
+    text-shadow: -1px -1px 1px #111, 2px 2px 1px #363636;
 	padding: 20px;
 }
 
@@ -18,20 +20,38 @@ body {
 	background-color: #818180;
 }
 
+#navbarDropdown {
+	color: #FBF6C2;
+	font-size: 30px;
+}
+
+.dropdown-menu {
+	background-color: #EEECE7;
+	width: 300px;
+}
+
+.dropdown-item {
+	font-size: 22px;
+	margin: 1rem auto;
+}
+
+.dropdown-item:active {
+	background-color: #818180;
+}
+
 .navbar-brand {
 	font-family: 'Allura', cursive;
-	color: #B19710;
+	color: #FBF6C2;
 	font-weight: bold;
 	font-size: 36px;
 }
 
 .navbar-nav {
 	border-radius: 15px;
-	margin-left: 13rem;
 }
 
 .nav-link {
-	color: #B19710;
+	color: #FBFAEA;
 	font-size: 18px;
 	margin-left: 20px;
 	margin-right: 20px;
@@ -74,20 +94,11 @@ body {
 	height: 100rem;
 }
 
-#fullStackPortfolio {
-}
-
 .display-1, .display-3 {
 	color: #B19710;
 	font-size: 120px;
 	line-height: 100px;
 	width: 300px;
-}
-
-
-
-#portfolio-1 {
-
 }
 
 #portfolio-2 {
@@ -133,45 +144,30 @@ body {
 /*----------ABOUT----------*/
 .allAboutMe {
 	background-color: #2A2A27;
-	height: 40rem;
+	height: 60rem;
 	padding: 40px;
-}
-.aboutMe {
-	float: left;
-	width: 100px;
 }
 
 #me {
 	margin-top: 1rem;
 }
 
-.aboutMeRowTwo {
-	margin-top: 2rem;
-}
-
 .aboutText {
-	border-radius: 15px;
-	border: 2px solid #EEECE7;
 	color: #EFE5AF;
 	float: right;
 	font-size: 23px;
 	line-height: 37px;
-	width: 1000px;
+	margin-top: 2rem;
+	text-align: center;
+	width: 500px;
 }
 /*----------ABOUT----------*/
 
 
 /*----------EMPLOYMENT----------*/
 #employment {
-	height: 85rem;
-}
-
-.employmentHeader {
-	padding-top: 4rem;
-}
-
-#employmentTextRowOne {
-	margin-bottom: 4rem;
+	height: 120rem;
+	padding: 40px;
 }
 
 .employmentText {
@@ -186,9 +182,14 @@ body {
 	width: 1000px;
 }
 
+.position:nth-child(n+2) {
+	margin-top: 5rem;
+}
+
 .position {
 	font-size: 36px;
 	font-weight: bold;
+	margin-top: 2rem;
 }
 
 .second {
@@ -208,6 +209,9 @@ body {
 #certificates {
 	background-color: #2A2A27; 
 	height: 40rem;
+}
+
+.allCertificates {
 	padding: 40px;
 }
 
@@ -225,8 +229,7 @@ body {
 
 
 /*----------SKILLS----------*/
-
-.skills {
+#skills {
 	height: 130rem;
 	padding: 40px;
 }
@@ -240,7 +243,7 @@ body {
 	margin-bottom: 2rem;
 }
 
-.developerSkills > .col-xl-4 > p {
+.skillName {
 	font-size: 36px;
 	font-weight: bold;
 	padding-left: 14px;
@@ -253,7 +256,7 @@ body {
 	transition: .5s ease-in-out;
 }
 
-.developerSkills > .col-xl-4:hover > p {
+.developerSkills > .col-xl-4:hover > .skillName {
 	-webkit-filter: blur(0);
 	filter: blur(0);
 }
@@ -388,9 +391,8 @@ body {
 /*----------FINALLY----------*/
 #finally {
 	background-color: #2A2A27;
-	height: 63rem;
-	padding-bottom: : 6rem;
-	padding-top: 6rem;
+	height: 50rem;
+	padding: 40px;
 }
 
 .finally {
@@ -403,39 +405,13 @@ body {
 	padding: 0;
 }
 
-.finally > p {
+.finallyDescription {
 	color: #EFE5AF;
-	font-size: 28px;
+	font-size: 23px;
 	line-height: 38px;
 	text-align: center;
 }
 
-#formField {
-	margin-top: 8rem;
-	text-align: center;
-}
-
-#inputText {
-	background-color: rgba(42, 42, 39, .3);
-	border-radius: 10px;
-	border: 3px solid #B19710;
-	font-size: 26px;
-	height: 150px;
-	overflow-wrap: break-word;
-	padding-top: 10px;
-	width: 700px;
-}
-
-
-button {
-	color: #B19710;
-	background-color: #2A2A27;
-	border-radius: 10px;
-	font-size: 24px;
-	padding: 20px;
-	margin-top: 1rem;
-
-}
 /*----------FINALLY----------*/
 
 
@@ -469,6 +445,20 @@ button {
 	text-align: center;
 	width: 1200px;
 }
+
+.movieLinks {
+	font-weight: bold;
+	margin-top: 1.7rem;
+	margin-bottom: 1.7rem;
+}
+
+.website:link {
+	color:#B19710;
+}
+
+.website:visited {
+	color:#818180;
+}
 /*----------MOVIES----------*/
 
 
@@ -476,28 +466,202 @@ button {
 
 
 
-@media only screen and (max-width: 0px) {
-    body {
-        background-color: blue;
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------MEDIA BREAKPOINTS----------*/
+@media only screen and (max-width: 1650px) {
+	#employment {
+		height: 150rem;
+	}
+
+	.employmentHeader {
+		font-size: 50px;
+	}
+
+	.aboutText, .employmentText {
+		margin-top: 2rem;
+		margin-left: auto;
+    	margin-right: auto;
+		width: 700px;
+	}
+}
+
+@media only screen and (max-width: 1480px) {
+	.projectPicture {
+		width: 275px;
+	}
+
+	.treehouseCertificate {
+		width: 400px;
+	}
+}
+
+@media only screen and (max-width: 1250px) {
+	.portfolio {
+        height:150rem;
+    }
+
+    #columnSkills {
+    	text-align: center;
+    }
+
+
+    .mainProjects {
+    	margin-top: 2rem;
+    }
+
+    .developerSkills > .col-xl-4 {
+    	margin-top: 1.5rem;
+    }
+
+    .skillName {
+    	text-align: center;
+    }
+	
+	.educationTitle, #portfolio-1 > h1 {
+		font-size: 50px;
+	}
+	
+	#portfolio-1 > h1 {
+		margin-left: auto;
+    	margin-right: auto;
+    	text-align: center;
+    }
+
+    #portfolio-2 {
+    	margin-left: auto;
+    	margin-right: auto;
+    	margin-top: 2rem;
+    }
+
+    .header {
+    	font-size:  50px;
+    }
+
+	.header::first-letter {
+		font-size: 130px;
+	} 
+
+	.certificateHeader {
+		font-size: 50px;
+		margin-left: auto;
+    	margin-right: auto;
+    	text-align: center;
+	}
+
+	.diplomaPicture {
+		width: 450px;
+	}
+
+	#finallyText {
+		width: 450px;
+		margin-left: auto;
+    	margin-right: auto;
+	}
+
+	.finallyTitle {
+		font-size: 50px;
+		text-align: center;
+	}
+}
+
+@media only screen and (max-width: 1199px) {
+	.employmentHeader, .educationTitle, #about, #me {
+		margin-left: auto;
+    	margin-right: auto;
+    	text-align: center;
+	}
+
+	.allAboutMe {
+    	height: 93rem;
+    }
+
+    #skills {
+    	height: 295rem;
+    }
+
+    #projects {
+    	height: 230rem;
     }
 }
 
+@media only screen and (max-width: 1100px) {
 
+	#allSoftSkills {
+    	width: 450px;
+    }
 
+    #allProjects {
+    	margin-top: 2rem;
+    }
 
+ 	.diplomaTitle {
+    	margin-top: 2rem;
+    	margin-bottom: 2rem;
+    	text-align: center;
+    }
 
+}
 
+@media only screen and (max-width: 950px) {
+	.header {
+		margin-left: auto;
+    	margin-right: auto;
+		text-align: center;
+	}
 
+    #deployment, #portfolio-2 {
+    	width: 400px;
+    }
 
+    .aboutText {
+    	width: 350px;
+    }
 
+    #certificates {
+    	height: 50rem;
+    }
 
+    .allCertificates {
+    	text-align: center;
+    }
 
+    .snapshot {
+    	margin-top: 2rem;
+    	text-align: center;
+    }
 
+    #employment {
+		height: 180rem;
+	}
 
+	#finally {
+		height: 80rem;
+	}
 
+    .finally {
+    	margin-top: 5rem;
+    	width: 450px;
+    }
 
-
-
+	#movieText {
+		 width: 450px;
+	}
+	#movieImage {
+		width: 350px;
+	}
+}
+/*----------MEDIA BREAKPOINTS----------*/
 
 
 

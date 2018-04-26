@@ -1,0 +1,28 @@
+doctype html(lang='en')
+html
+  head
+    title Introduction
+
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css', integrity='sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb', crossorigin='anonymous')
+    
+    link(rel='stylesheet', type='text/css', href='reset.css')
+    link(rel='stylesheet', type='text/css', href='notYet.css')
+    link(href=href="https://fonts.googleapis.com/css?family=Kreon" rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css?family=Cormorant+Garamond" rel="stylesheet")
+  body
+    .container
+      h1.display-1.text-center New Project Coming Soon!
+      |
+      hr
+      |
+      h2 While you wait, take a look at some of my recent tweets (funny, I know).
+      |
+      .allTweets
+        each status in statuses	
+          p#tweets= status
+      |
+      p.links
+        a.back(href='/home') Home
+      p.links
+        a.intro(href='/introPage') Introduction
+

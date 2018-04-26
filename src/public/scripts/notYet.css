@@ -1,0 +1,30 @@
+body {
+	background-color: #FAF7EA;
+	font-family: 'Cormorant Garamond', serif;
+	font-variant: small-caps;
+	color: #565653;
+}
+
+.container {
+	margin-top: 14rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+h1 {
+	
+	letter-spacing: 6px;
+}
+
+hr {
+	height: 10px;
+	border-radius: 5px;
+	box-shadow: 0 10px 10px -10px inset;
+	background-color: rgba(	118, 217, 109, .3 );
+	position: relative;
+	text-align: center;
+}
+
+h2 {
+	font-size: 36px;
+	text-align: center;
+}

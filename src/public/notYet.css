@@ -1,0 +1,62 @@
+body {
+	background-color: #FAF7EA;
+	font-family: 'Cormorant Garamond', serif;
+	font-variant: small-caps;
+	color: #565653;
+}
+
+.container {
+	margin-top: 14rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+h1 {
+	
+	letter-spacing: 6px;
+}
+
+hr {
+	height: 10px;
+	border-radius: 5px;
+	box-shadow: 0 10px 10px -10px inset;
+	background-color: rgba(	118, 217, 109, .3 );
+	position: relative;
+	text-align: center;
+}
+
+h2 {
+	font-size: 36px;
+	text-align: center;
+}
+
+.allTweets {
+	border-radius: 15px;
+	border: 2px solid rgba(88, 87, 86, .5);
+	margin-top: 2rem;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 10px;
+	width: 400px;
+}
+
+#tweets {
+	font-size: 23px;
+	margin-top: 1rem;
+	text-align: center;
+}
+
+.links {
+	font-size: 23px;
+	font-weight: bold;
+	margin-top: 1.7rem;
+	margin-bottom: 1.7rem;
+	text-align: center;
+}
+
+a:link {
+	color:#B19710;
+}
+
+a:visited {
+	color:#818180;
+}

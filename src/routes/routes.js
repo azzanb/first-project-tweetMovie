@@ -10,51 +10,25 @@ const express = require('express'),
 
 	{Data} = require('./../../db/models/Data'),
 
-	movieApiKey = '9af06f22';
+	movieApiKey = require('../movieAPI');
 
 
 
-//------------Twitter API Calls------------//
-
-//GET user profile data 
-function credentials(req, res, next){
-	tweet.get('account/verify_credentials', { skip_status: true }, function(err, credentials, res){
-		req.credentials = credentials;
-		next();
-	});
-}
-
+//------------Twitter API Call------------//
 //GET user tweets
 function statuses(req, res, next){
 	tweet.get('statuses/user_timeline', (err, statuses, res) => {
-		req.statuses = statuses;
-		next();
+		err ? next(err) : 
+			req.statuses = statuses;
+			next();
 	});
 }
-
-//GET who user follows
-function friends(req, res, next){
-	tweet.get('friends/list', function(err, friends, res){
-		req.friends = friends;
-		next();
-	});
-}
-
-//GET who follows user
-function followers(req, res, next){
-	tweet.get('followers/list', (err, followers, res) => {
-		req.followers = followers;
-		next();
-		
-	});
-}
-
-//------------END: Twitter API Calls------------//
+//------------Twitter API Call------------//
 
 
 
 
-
+//------------Intro Page------------//
 router.get('/introPage', (req, res, next) => {
 	console.log(res.locals);
 	res.render('introPage');
@@ -81,20 +55,16 @@ router.post('/introPage', (req, res) => {
 		}
 	});
 });
+//------------Intro Page------------//
 
 
 
-router.get('/home', credentials, statuses, friends, followers, (req, res) => {
+
+//------------Home Route------------//
+router.get('/home', (req, res) => {
 
 	Data.find().then((database) => {
 		const num = database.length - 1;
-		const followerNums = [];
-		const friendNums = [];
-		
-		for(let i = 0; i <= 5; i++){
-			followerNums.push(commaNumber(req.friends.users[i].followers_count));
-			friendNums.push(commaNumber(req.friends.users[i].friends_count));
-		}
 
 		return request({ //GET movie details
 			method: 'GET',
@@ -104,23 +74,32 @@ router.get('/home', credentials, statuses, friends, followers, (req, res) => {
 		.then(movieDetails => {
 			res.render('homeLayout', {
 				movie: JSON.parse(movieDetails),
-				credentials: req.credentials,
-				status: req.statuses,
-				friend: req.friends,
-				friendNums,
-				follower: req.followers.users,
-				followerNums,
-				time_ago: ta.ago(req.credentials.created_at)
 			});
 
 		});
 	});
 });
+//------------Home Route------------//
 
-router.get('/notYet', function(req,res){
-	res.send("Not Yet!")
+
+
+
+
+//------------Coming Soon Route------------//
+router.get('/notYet', statuses, function(req,res){
+	let allStatuses = [];
+
+	for(let i = 0; i < 5; i++){
+		allStatuses.push(req.statuses[i].text)
+	}
+
+	console.log(allStatuses)
+	
+	res.render('notYet', {
+		statuses: allStatuses
+	});
 });
-
+//------------Coming Soon Route------------//
 
 
 module.exports = router;
