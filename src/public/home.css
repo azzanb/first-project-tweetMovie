@@ -563,6 +563,10 @@ body {
 		width: 450px;
 	}
 
+	#finally {
+		height: 80rem;
+	}
+
 	#finallyText {
 		width: 450px;
 		margin-left: auto;
@@ -643,10 +647,6 @@ body {
 
     #employment {
 		height: 180rem;
-	}
-
-	#finally {
-		height: 80rem;
 	}
 
     .finally {
